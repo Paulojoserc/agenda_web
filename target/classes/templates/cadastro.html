@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" cintent="width=device-width, initial-scale=1.0">
+	<title>Sistema de Agenda</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="navber-content">
+				<div class="menu">
+					<h3>Agenda <span class="cor-java">Java Web</span></h3>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/cadastro">Cadastro</a></li>
+						<li><a href="/contato">Contato</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="corpo">
+			<form action="/cadastrarContato" method="post">
+				<h2>Cadastro de Contato</h2>
+				<label>Nome:</label>
+				<input type="text" name="nome"><br>
+				<label>E-mail:</label>
+				<input type="text" name="email"><br>
+				<label for="fone">Telefone:</label>
+				<input type="text" name="fone"><br>
+				
+				<h3 class="status" th:text="${mensgem}"></h3>
+			</form>
+		</div>
+		<div class="rodape">
+			<div class="rodape-content">
+				PJTec LTDA
+			</div>
+		</div>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
