@@ -26,7 +26,7 @@
 		<div class="corpo">
 			<h1>Lista de Contatos</h1>
 			<p>
-				<button onclick"location.href='/buscarContato'"></button>
+				<button onclick"location.href='/buscarContato'">Buscar</button>
 			</p>
 		</div>
 	<div th:if=" ${ not#list.isEmpty(contatos)}">
@@ -37,8 +37,15 @@
 							<th>E-mail</th>
 							<th>Telefone</th>
 						</tr>
+						<tr th:each="contato:${contatos}">
+							<td th:text="${contato.id}">
+							<td th:text="${contato.nome}">
+							<td th:text="${contato.email}">
+							<td th:text="${contato.fone}">
+						</tr>
 					</table>
 		</div>
+		<h3 class="status" th:text="${resultado}"></h3>
 		<div class="rodape">
 			<div class="rodape-content">
 				PJTec LTDA
